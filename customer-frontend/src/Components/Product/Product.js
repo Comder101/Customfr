@@ -46,25 +46,25 @@ function ProductList() {
           image="https://via.placeholder.com/150x150"
           title="Product name"
           weight="250g"
-          price="Rs.79"
+          price="Rs.100"
         />
         <ProductCard
           image="https://via.placeholder.com/150x150"
           title="Product name"
           weight="250g"
-          price="Rs.79"
+          price="Rs.100"
         />
         <ProductCard
           image="https://via.placeholder.com/150x150"
           title="Product name"
           weight="500g"
-          price="Rs.59"
+          price="Rs.100"
         />
         <ProductCard
           image="https://via.placeholder.com/150x150"
           title="Product name"
           weight="1000g"
-          price="Rs.120"
+          price="Rs.100"
         />
       </div>
       <div className="product-list-container">
@@ -72,25 +72,25 @@ function ProductList() {
           image="https://via.placeholder.com/150x150"
           title="Product name"
           weight="250g"
-          price="Rs.79"
+          price="Rs.100"
         />
         <ProductCard
           image="https://via.placeholder.com/150x150"
           title="Product name"
           weight="250g"
-          price="Rs.79"
+          price="Rs.100"
         />
         <ProductCard
           image="https://via.placeholder.com/150x150"
           title="Product name"
           weight="500g"
-          price="Rs.120"
+          price="Rs.100"
         />
         <ProductCard
           image="https://via.placeholder.com/150x150"
           title="Product name"
           weight="1000g"
-          price="Rs.200"
+          price="Rs.100"
         />
       </div>
     </div>
