@@ -27,7 +27,7 @@ const Order = () => {
     "product":"abc",
     "customer":"cde",
     "quantity":4,
-    "price":100,
+    "price":120,
     "address":"puneeee",
     "phone":"9900990099",
     "date":"08/05/2023",
@@ -50,7 +50,7 @@ const Order = () => {
       </div>
       <div className="total">
         <span className="green-text">Total:</span>
-        <span>100Rs</span>
+        <span>120Rs</span>
       </div>
       <div className="button-main">
         <button className="order-button" onClick={() => navigate("/payment", { state: { obj: { orderobj } } })}>Place Order</button>

@@ -51,7 +51,7 @@ const HomePage = (props) => {
             />
             <div className="description">
             <h3>Product Name</h3>
-            <h5>₹ 100.00</h5>
+            <h5>₹ 20.00</h5>
             </div>
             </div>
             <form action="api/payment" method="POST" onSubmit={handlesubmit}>
