@@ -1,39 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import './Order.css';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 
 const Order = () => {
-  const navigate = useNavigate();
-  // const handlePlaceOrderClick = async () => {
-  //   try {
-  //     const response = await axios.get('http://127.0.0.1:8000/api/payment/');
-  //     window.location.href = response.data.payment_url;
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // };
+  const [orderDetails, setOrderDetails] = useState(null);
 
-  // useEffect(() => {
-  //   const placeOrderButton = document.querySelector('.order-button');
-  //   placeOrderButton.addEventListener('click', handlePlaceOrderClick);
+  useEffect(() => {
+    const fetchOrderDetails = async () => {
+      try {
+        const response = await axios.get('API_URL');
+        setOrderDetails(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
 
-  //   return () => {
-  //     placeOrderButton.removeEventListener('click', handlePlaceOrderClick);
-  //   };
-  // }, []);
-
-  const [orderobj, setorderobj] = useState({
-    "product":"abc",
-    "customer":"cde",
-    "quantity":4,
-    "price":120,
-    "address":"puneeee",
-    "phone":"9900990099",
-    "date":"08/05/2023",
-    "status":true
-  });
-
+    fetchOrderDetails();
+  }, []);
 
   return (
     <div className="order-main">
@@ -53,8 +36,14 @@ const Order = () => {
         <span>120Rs</span>
       </div>
       <div className="button-main">
-        <button className="order-button" onClick={() => navigate("/payment", { state: { obj: { orderobj } } })}>Place Order</button>
+        <button className="order-button">Place Order</button>
       </div>
+      {orderDetails && (
+        <div className="order-details">
+          <h2>Order Details:</h2>
+          {/* Display order details*/}
+        </div>
+      )}
     </div>
   );
 };
