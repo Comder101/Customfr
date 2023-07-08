@@ -69,6 +69,7 @@
     padding: 10px;
     margin-top: 20px;
     cursor: pointer;
+    /* visibility: visible !important; */
   }
 
   .address-input{
@@ -89,7 +90,3 @@
     margin-top: 5px;
   }
   
-
-  .submit-button{
-    text-align: center;
-  }

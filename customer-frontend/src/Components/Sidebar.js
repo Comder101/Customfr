@@ -32,7 +32,7 @@ function Sidebar() {
       <div className={`container2 ${showSidebar ? "show-sidebar" : ""}`}>
         <div className="sidebar-header">
           <img src={User} alt="User profile" className="user-profile" />
-          <h3 className="user-name">User Name</h3>
+          <h3 className="user-name">User Name :</h3>
           <p className="user-email">user@email.com</p>
         </div>
         <ul className="sidebar-links">

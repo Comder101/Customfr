@@ -1,7 +1,7 @@
 import React from "react";
 import Main from "../Components/ProductDetail/Main";
 
-const PlaceOrder = () => {
+const ProductDetail = () => {
   return (
     <div>
       <Main />
@@ -9,4 +9,4 @@ const PlaceOrder = () => {
   );
 };
 
-export default PlaceOrder;
+export default ProductDetail;

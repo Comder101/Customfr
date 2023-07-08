@@ -81,10 +81,3 @@
   width: calc(50% - 10px);
   margin-bottom: 20px;
 }
-
-@media only screen and (max-width: 768px) {
-  .subcat-container{
-    margin-top: -20rem;
-  }
-}
-

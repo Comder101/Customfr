@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import LoginPage from "./routes/LoginPage";
 import Home from "./routes/Home";
 import Product from "./routes/Product";
-import ProductDetail from "./routes/ProductDetail";
+// import ProductDetail from "./routes/ProductDetail";
 import PlaceOrder from "./routes/PlaceOrder";
 import SignUp from "./routes/SignUp";
 import Profile from "./routes/Profile";
@@ -17,6 +17,9 @@ import Wallet from "./routes/Wallet";
 import Phone from "./Components/Phone_Val/Phone";
 import ShowProducts from "./routes/ShowProducts";
 
+// my componantes is import new one 
+import ProductDetails from "./Components/ProductDetail/ProductDetails";
+
 
 function App() {
   return (
@@ -27,7 +30,11 @@ function App() {
         <Route exact path="/login" element={<LoginPage />} />
         <Route exact path="/home" element={<Home />} />
         <Route exact path="/subcategory" element={<Product />} />
-        <Route exact path="/productdetails" element={<ProductDetail />} />
+
+        {/* <Route exact path="/productdetail" element={<ProductDetail />} /> */}
+        {/* new one path of add to cart  */}
+        <Route exact path="/productdetails" element={<ProductDetails />} />
+
         <Route exact path="/placeorder" element={<PlaceOrder />} />
         <Route exact path="/profile" element={<Profile />} />
         <Route exact path="/updateProfile" element={<UpdateProfile />} />

@@ -102,17 +102,19 @@ export default function ProductList() {
 
 function ProductCard(props) {
     const { obj } = props;
+    
 
     return (
         <div className="product-card">
             <div className="product-image">
-                <img src={obj.image} alt={obj.productname} />
+                {/* <img src={obj.image} alt={obj.productname} /> */}
+                <img src={obj.image}></img>
             </div>
-            <h2 className="product-title ">{obj.productname}</h2>
+            {/* <h2 className="product-title ">{obj.productname}</h2> */}
             <p className="product-weight ">brand : {obj.brand}</p>
             <div className="product-price">
                 <p>Rs. {obj.productprice}</p>
-                <button className='cart-btn'><Link to="/productdetails" state={obj} >Add to cart</Link></button>
+                <button className='cart-btn'><Link to="/productdetails"  >Add to cart</Link></button>
             </div>
         </div>
     );

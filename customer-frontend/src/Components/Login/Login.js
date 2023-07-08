@@ -31,10 +31,11 @@ function Login() {
         <div className="login-form">
           <form className="form-container" onSubmit={onLoginSubmit}>
             <h2 className="form-header">LOGIN</h2>
-            <hr className="form-input" />
+            <hr></hr>
+            {/* <hr className="form-input" /> */}
 
             <div className="field-input">
-              <label>Phone</label>
+              <label className="mt-2">Phone</label>
               <input required className="phone-input" type="text" name="number" placeholder="Enter your Phone No." {...register('email', { required: true })} />
             </div>
             <p className="phone-error">{errors.email && "Phone is required"}</p>

@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import Header from "../Header";
 import ProductList from "./ProductList";
+import { redirect } from "react-router-dom";
 
 const Home = () => {
   return (
