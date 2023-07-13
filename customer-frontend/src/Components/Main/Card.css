@@ -62,6 +62,7 @@ h1 {
   .cards {
     justify-content: center;
     gap: 15px;
+    margin-top: 302px;
   }
 
   .card {

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OTP.css";
-import { Link } from "react-router-dom";
 
 function SignupForm() {
   const navigate = useNavigate();
@@ -49,10 +48,9 @@ function SignupForm() {
               required
             />
           </label>
-          <Link to="/signup"><button type="submit" className="update">
-            SUBMIT
+          <button type="submit" className="update">
+            Send OTP
           </button>
-          </Link>
         </form>
       </div>
     );

@@ -6,4 +6,11 @@
     color: #fff;
   
   }
+  @media (max-width: 768px){
+
+    .C{
+
+      background-color: #EDF1D6 !important;
+    }
+  }
 

@@ -63,6 +63,13 @@
 
 @media only screen and (max-width: 768px) {
   .second-container {
-    margin-top: -40rem;
+    margin-top: -50rem;
+  }
+}
+@media (max-width: 768px){
+  .advertisement-photo {
+    width: 98.5%;
+    height: auto;
+    margin-top: 453px;
   }
 }

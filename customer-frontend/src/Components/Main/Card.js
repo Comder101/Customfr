@@ -5,19 +5,20 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Cards = () => {
+
   const [cardsData, setCardsData] = useState([]);
   const navigate = useNavigate();
 
   const getCatArray = async () => {
-    const response = await fetch(`https://adminpr.onrender.com/api/category/`, {
-      method: "GET",
+    const response = await fetch(`https://adminlm.onrender.com/api/category/`, {
+      method: 'GET',
       headers: {
-        "Content-Type": "application/json",
-      },
+        'Content-Type': 'application/json',
+      }
     });
     const json = await response.json();
     setCardsData(json);
-  };
+  }
   useEffect(() => {
     getCatArray();
   }, []);
@@ -31,7 +32,7 @@ const Cards = () => {
             className="card"
             style={{ backgroundColor: card.backcolor }}
           >
-            <img src={card.image} alt="card-image" className="card-image" />
+            <img src="https://via.placeholder.com/200" alt="card-image" className="card-image" />
             <div className="card-title">{card.category}</div>
             <Link
               to="/subcategory"
@@ -42,6 +43,7 @@ const Cards = () => {
               {card.offer}
             </Link>
             {/* <button className="card-title" onClick={() => navigate("/subcategory", { state: { obj:  card.category  } })}></button> */}
+
           </div>
         ))}
       </div>
