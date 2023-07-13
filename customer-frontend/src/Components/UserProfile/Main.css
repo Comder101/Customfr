@@ -20,7 +20,7 @@
   @media only screen and (max-width: 768px) {
 
    .main{
-    height: 150vh !important;
+    height: 200vh;
     width: 2000vh;
    }
 

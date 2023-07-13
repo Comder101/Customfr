@@ -67,7 +67,7 @@ hr {
 
 @media only screen and (max-width: 768px) {
   .wallet-container {
-    margin-top: -1rem;
+    margin-top: -20rem;
   }
   .wallet-options {
     flex-wrap: wrap;

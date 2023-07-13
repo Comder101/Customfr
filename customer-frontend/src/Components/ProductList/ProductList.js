@@ -12,7 +12,7 @@ export default function ProductList() {
     const [products, setproducts] = useState([]);
 
     const getProducts = async () => {
-        const response = await fetch(`https://admindashb.onrender.com/api/product/`, {
+        const response = await fetch(`https://adminpr.onrender.com/api/product/`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -102,22 +102,18 @@ export default function ProductList() {
 
 function ProductCard(props) {
     const { obj } = props;
-    
 
     return (
         <div className="product-card">
             <div className="product-image">
-                {/* <img src={obj.image} alt={obj.productname} /> */}
-                <img src={obj.image}></img>
+                <img src={obj.image} alt={obj.productname} />
             </div>
-            {/* <h2 className="product-title ">{obj.productname}</h2> */}
+            <h2 className="product-title ">{obj.productname}</h2>
             <p className="product-weight ">brand : {obj.brand}</p>
             <div className="product-price">
                 <p>Rs. {obj.productprice}</p>
-                <button className='cart-btn'><Link to="/productdetails"  >Add to cart</Link></button>
+                <button className='cart-btn'><Link to="/productdetails" state={obj} >Add to cart</Link></button>
             </div>
         </div>
     );
 }
-
-// *************************************************
