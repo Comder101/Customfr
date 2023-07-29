@@ -10,7 +10,7 @@ const Cards = () => {
   const navigate = useNavigate();
 
   const getCatArray = async () => {
-    const response = await fetch(`https://adminlm.onrender.com/api/category/`, {
+    const response = await fetch(`https://adminpr.onrender.com/api/product/`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -32,8 +32,11 @@ const Cards = () => {
             className="card"
             style={{ backgroundColor: card.backcolor }}
           >
-            <img src="https://via.placeholder.com/200" alt="card-image" className="card-image" />
+            <img src={card.image} alt="card-image" className="card-image" />
             <div className="card-title">{card.category}</div>
+            <p>{card.brand}</p>
+            <p>{card.productprice}</p>
+            
             <Link
               to="/subcategory"
               state={card.id}

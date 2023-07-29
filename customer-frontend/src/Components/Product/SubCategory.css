@@ -1,6 +1,6 @@
 .subcategory-page {
   padding: 20px;
-  margin-top: -22rem;
+  margin-top: -2rem;
 }
 
 .subcategory-heading {
@@ -80,4 +80,19 @@
 .top-seller-row .product-card {
   width: calc(50% - 10px);
   margin-bottom: 20px;
+}
+
+@media(max-width:768px){
+  .subcategory-page {
+    padding: 20px;
+    margin-top: -2rem;
+  }
+  .product-card {
+    width: 32%;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 2px;
+    border: 0.5px solid #888;
+    border-radius: 5px;
+  }
 }

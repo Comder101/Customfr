@@ -99,6 +99,7 @@
     cursor: pointer;
     margin-bottom: 5px;
     transition: all ease 0.6s;
+    width: auto;
   }
   .cart-item-remove:hover{
     background-color: rgb(225, 54, 54);
@@ -119,6 +120,33 @@
       }
 }
 
+/* .place-order{
+  font-size: 10px;
+  font-size: 12px;
+  background-color: orange;
+  width: auto;
+  padding: 3px 10px;
+  font-weight: 400;
+} */
+
+/* .place-order {
+  font-size: 10px;
+  font-size: 12px;
+  background-color: orange;
+  width: auto;
+  padding: 8px 33px;
+  font-weight: 400;
+  margin-left: 327px;
+  position: relative;
+  margin-top: 50px;
+} */
+.place-order{
+
+  background-color:orange;
+  padding: 10px 10px;
+  border-radius: 5px;
+  width: auto%;
+}
   
 
 

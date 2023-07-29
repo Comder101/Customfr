@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Cart.css';
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
-  const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+  // Fetch the cart items from localStorage and initialize state
+  const initialCartItems = JSON.parse(localStorage.getItem('cart')) || [];
+  const [cartItems, setCartItems] = useState(initialCartItems);
+  
 
+  // Function to remove an item from the cart
   const removeItem = (index) => {
     const updatedCartItems = cartItems.filter((_, i) => i !== index);
     localStorage.setItem('cart', JSON.stringify(updatedCartItems));
-    window.location.reload(); // Refresh the page to reflect the changes
+    setCartItems(updatedCartItems);
   };
+
+  // Calculate the total price of cards
+  const totalPrice = cartItems.reduce((total, item) => total + item.productprice, 0);
 
   return (
     <div>
@@ -26,6 +34,7 @@ const Cart = () => {
                     <img src={item.image} alt={item.productname} className="cart-item-image" />
                     <div className="cart-item-details">
                       <p>{item.productname}</p>
+                      <p>{item.id}</p>
                       <p>Price: {item.productprice}</p>
                       <p>Brand: {item.brand}</p>
                     </div>
@@ -38,8 +47,18 @@ const Cart = () => {
             ))}
         </div>
       )}
+      <div className="total-count">Total Cards: {cartItems.length}</div>
+      <div className="total-price">Total Price: {totalPrice}Rs</div>
+      <button className="place-order">
+        <Link to="/placeorder" state={{ cartItems, totalPrice }}>Continue</Link>
+      </button>
     </div>
   );
 };
 
 export default Cart;
+
+
+
+
+

@@ -14,7 +14,7 @@ function SubcategoryPage(props) {
   const [subcats, setsubcats] = useState([]);
 
   const getSubCatArray = async () => {
-    const response = await fetch(`https://adminlm.onrender.com/api/subcategory/`, {
+    const response = await fetch(`https://adminpr.onrender.com/api/subcategory/`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -129,14 +129,14 @@ function SubcategoryPage(props) {
 
     <>
       <h1 className="subcategory-heading">Shop By Subcategory</h1>
-      {/* <div className="mt-0 cards">
+      <div className="mt-0 cards">
         {subcats.map((card) => (
           <div
             key={card.id}
             className="card"
             style={{ backgroundColor: card.backcolor }}
           >
-            <img src="https://via.placeholder.com/200" alt="card-image" className="card-image" />
+            <img src={card.image} alt="card-image" className="card-image" />
             <div className="card-title">{card.subcategory}</div>
             <Link
               to="/productlist"
@@ -148,7 +148,7 @@ function SubcategoryPage(props) {
             </Link>
           </div>
         ))}
-      </div> */}
+      </div>
 
 
 
